@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #504970;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../Faqs/assets/images/background-pattern-desktop.svg');
+    overflow-y: auto;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-faq {
+    background-color: #ffff;
+    border-radius: 15px;
+    padding: 30px;
+    color: #37334B;
+    width: 550px;
+    height: auto;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.faq h2 {
+    text-align: start;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #37334B;
+    position: relative;
+}
+
+.star-icon {
+    height: 30px;
+    width: 31px;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.item-faq {
+    margin-bottom: 20px;
+}
+
+.pergunta-faq {
+    background-color: #ffffff;
+    color: #2a2626;
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+     font-family: "Inter", sans-serif;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.plus-icon {
+    display: block;
+}
+
+.minus-icon {
+    display: none;
+}
+
+.pergunta-faq.ativo .plus-icon {
+    display: none;
+}
+
+.pergunta-faq.ativo .minus-icon {
+    display: block;
+}
+
+.resposta-faq {
+    background-color: white;
+    color: #3d3951;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: none;
+    font-weight: 300;
+}
+
+.resposta-faq p {
+    margin: 0;
+}
+
+.suporte {
+    color: #7B2ABB;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .container-faq {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .faq h2 {
+        margin-left: 40px;  
+        font-size: 28px;
+    }
+
+    .star-icon {
+        left: -30px;  
+    }
+
+    .pergunta-faq {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .resposta-faq {
+        padding: 10px;
+    }
+}
+
+

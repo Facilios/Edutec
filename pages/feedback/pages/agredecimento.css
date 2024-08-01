@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+:root {
+    --dark-blue: #262e38;
+    --light-grey: #969FAD;
+    --medium-grey: #7C8798;
+    --orange: #FC7614;
+    --white: #FFF;
+    --very-dark-blue: #403A5F;
+    --black-gradient: radial-gradient(circle, #433D60 -20%, #1e252e 100%);
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: var(--black-gradient);
+    max-width: 412px;
+    padding: 45px 32px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.card img {
+    margin-bottom: 32px;
+}
+
+.card .paragrafo_nota {
+    background-color: #8176AF;
+    width: fit-content;
+    margin-inline: auto;
+    padding: 4px 18px;
+    border-radius: 22px;
+    font-size: 15px;
+    color: var(--white);
+    margin-bottom: 32px;
+}
+
+.card h1 {
+    color: var(--white);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #969FAD;
+    font-size: 15px;
+    line-height: 24px;
+}
+
