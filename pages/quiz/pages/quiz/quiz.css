@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    --bg-color: #f4f6fa;
+    --bg-span: #f4f6fa;
+    --color-span: #626c7f;
+    --purple: #8828D3;
+    --purple-hover: linear-gradient(90deg, #7B2ABB 0%, #601B96 100%);
+    --primary-text-color: #675C9A;
+    --secundary-text-color: #9084C6;
+    --button-bg: #fff;
+    --shadow: 0px 16px 40px 0px rgba(54, 62, 70, 0.14);
+    --bg-html: #fff1e9;
+    --bg-css: #e0fdef;
+    --bg-javascript: #ebf0ff;
+    --bg-acessibilidade: #f6e7ff;
+    --white: #fff;
+    --green: #26d782;
+    --red: #ee5454;
+    --bg-mobile: url(../../assets/images/Background\ Mobile\ light.svg);
+    --bg-desktop: url(../../assets/images/Background\ desktop\ light.svg);
+}
+
+body.escuro {
+    --bg-color: #37334B;
+    --color-span: #313e51;
+    --bg-mobile: url(../../assets/images/Background\ mobile\ Dark.svg);
+    --bg-desktop: url(../../assets/images/Background\ Desktop\ Dark.svg);
+    --primary-text-color: #fff;
+    --secundary-text-color: #9084C6;
+    --button-bg: #2E2A43;
+    --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
+}
+
+body {
+    height: 100svh;
+    background: var(--bg-mobile) var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+.assunto {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.assunto_icone{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.assunto_icone.html {
+    background: var(--bg-html);
+}
+
+.assunto_icone.css {
+    background: var(--bg-css);
+}
+
+.assunto_icone.javascript {
+    background: var(--bg-javascript);
+}
+
+.assunto_icone.acessibilidade {
+    background: var(--bg-acessibilidade);
+}
+
+.assunto_icone img {
+    width: 100%;
+}
+
+.assunto h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+
+.tema {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tema img {
+    width: 16px;
+}
+
+.tema button {
+    height: 20px;
+    width: 32px;
+    background: var(--purple);
+    border: 0;
+    border-radius: 999px;
+    padding: 4px;
+    display: flex;
+    cursor: pointer;
+}
+
+.tema button div {
+    background: var(--white);
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+}
+
+main {
+    padding: 32px 24px;
+}
+
+.pergunta {
+    margin-bottom: 40px;
+}
+
+.pergunta p {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--secundary-text-color);
+    margin-bottom: 12px;
+}
+
+.pergunta h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.barra_progresso {
+    background: var(--button-bg);
+    height: 16px;
+    padding: 4px;
+    border-radius: 999px;
+}
+
+.barra_progresso div {
+    height: 100%;
+    background: var(--purple);
+    border-radius: 999px;
+}
+
+.alternativas form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.alternativas label {
+    display: block;
+    background: var(--button-bg);
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    color: var(--primary-text-color);
+    cursor: pointer;
+}
+
+.alternativas label:hover {
+    & span {
+        background: var(--bg-acessibilidade);
+        color: var(--purple);
+    }
+}
+
+.alternativas label:has(input:checked) {
+    outline: 3px solid var(--purple);
+
+    & span {
+        background: var(--purple);
+        color: var(--white);
+    }
+}
+
+.alternativas label#correta {
+    outline: 3px solid var(--green);
+
+    & span {
+        background: var(--green);
+        color: var(--white);
+    }
+}
+
+.alternativas label#errada {
+    outline: 3px solid var(--red);
+
+    & span {
+        background: var(--red);
+        color: var(--white);
+    }
+}
+
+.alternativas input {
+    display: none;
+}
+
+.alternativas div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.alternativas div span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-span);
+    border-radius: 5px;
+    color: var(--color-span);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.alternativas button {
+    padding: 16px;
+    border-radius: 12px;
+    border: 0;
+    background: var(--purple);
+    color: var(--white);
+    width: 100%;
+
+    font-size: 18px;
+    font-weight: 500;
+    transition: backgroun 0.3s;
+}
+
+.alternativas button:hover {
+    background: var(--purple-hover);
+    cursor: pointer;
+}
+
+@media(min-width: 1100px) {
+
+    body {
+        background: var(--bg-desktop) var(--bg-color);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        margin-block: 81px;
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+
+    .assunto_icone {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
+
+    .assunto h1 {
+        font-size: 28px;
+    }
+
+    .tema {
+        gap: 16px;
+    }
+
+    .tema img {
+        width: 24px;
+    }
+
+    .tema button {
+        width: 48px;
+        height: 28px;
+    }
+
+    .tema button div {
+        width: 20px;
+        height: 20px;
+    }
+
+    main {
+        max-width: 1160px;
+        margin-inline: auto;
+
+        display: flex;
+        gap: 130px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .pergunta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .pergunta p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 27px;
+    }
+
+    .pergunta h2 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .alternativas form {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .alternativas label {
+        font-size: 22px;
+        padding: 18px 20px;
+        border-radius: 24px;
+    }
+
+    .alternativas div {
+        gap: 32px;
+    }
+
+    .alternativas div span {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+    }
+
+    .alternativas button {
+        font-size: 22px;
+    }
+}
