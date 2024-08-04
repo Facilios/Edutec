@@ -18,8 +18,11 @@ function alterarAssunto() {
     const iconeImg = document.querySelector(".assunto_icone img")
     const assuntoTitulo = document.querySelector(".assunto h1")
 
-    divIcone.classList.add(assunto.toLowerCase())
-    iconeImg.setAttribute("src", `/pages/quiz/assets/images/icon-${assunto.toLowerCase()}.svg`)
+    const assuntoClass = assunto.toLowerCase().replace(/\s+/g, '-');
+    const assuntoSrc = assuntoClass.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    divIcone.classList.add(assuntoClass)
+    iconeImg.setAttribute("src", `/pages/quiz/assets/images/icon-${assuntoSrc}.svg`)
     iconeImg.setAttribute("alt", `ícone de ${assunto}`)
     assuntoTitulo.innerText = assunto
 }
@@ -32,11 +35,9 @@ function inserirResultado() {
     const pontos = localStorage.getItem("pontos")
 
     sectionPontuacao.innerHTML = `
-            ${divAssunto.outerHTML}
-
-                    <strong>${pontos}</strong>
-
-                    <p>de 10</p>
+        ${divAssunto.outerHTML}
+        <strong>${pontos}</strong>
+        <p>de 10</p>
     `
 }
 
@@ -44,7 +45,7 @@ function jogarNovamente() {
     localStorage.removeItem("pontos")
     localStorage.removeItem("assunto")
 
-    window.location.href = "../../quizHOME.html"
+    window.location.href = "../../quizHome.html"
 }
 
 inserirResultado()

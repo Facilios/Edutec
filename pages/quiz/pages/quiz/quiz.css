@@ -190,6 +190,7 @@ main {
     }
 }
 
+
 .alternativas label#correta {
     outline: 3px solid var(--green);
 

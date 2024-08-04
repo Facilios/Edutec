@@ -7,6 +7,8 @@
 }
 
 :root {
+    --exit-color: #EE5454;
+    --exit-color-hover: #BE3B3B;
     --bg-color: #f4f6fa;
     --bg-span: #f4f6fa;
     --color-span: #626c7f;
@@ -157,6 +159,7 @@ main h2 strong {
 }
 
 main button {
+    margin-bottom: 20px;
     padding: 16px;
     border-radius: 12px;
     border: 0;
@@ -174,6 +177,21 @@ main button:hover {
     background: var(--purple-hover);
     cursor: pointer;
 }
+
+.sair {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: var(--exit-color);
+    margin: 0 auto;
+}
+
+.sair:hover {
+    background: var(--exit-color-hover);
+    cursor: pointer;
+}
+
 
 @media(min-width: 1100px) {
     body {
