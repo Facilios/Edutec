@@ -7,6 +7,11 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="main.css">
 	<style>
+
+		* {
+			cursor: grab;
+		}
+
 		body {
 			background-color: #050505;
 			background: radial-gradient(ellipse at center, #302c42 0%, rgba(0, 0, 0, 1) 100%);
@@ -330,7 +335,7 @@
 
 			scene = new THREE.Scene();
 
-			// table
+			// TABELA
 
 			for (let i = 0; i < table.length; i += 5) {
 
@@ -371,7 +376,7 @@
 
 			}
 
-			// sphere
+			// ESFERA
 
 			const vector = new THREE.Vector3();
 
@@ -392,7 +397,7 @@
 
 			}
 
-			// helix
+			// HELICÓIDE
 
 			for (let i = 0, l = objects.length; i < l; i++) {
 
@@ -413,7 +418,7 @@
 
 			}
 
-			// grid
+			// GRADE
 
 			for (let i = 0; i < objects.length; i++) {
 

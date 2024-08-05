@@ -1,0 +1,140 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2d2a5d; 
+}
+
+.chat-container {
+    background-color: rgba(31, 27, 69, 0.9); 
+    width: 400px; 
+    height: 600px; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #6c63ff; 
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bot-info {
+    display: flex;
+    align-items: center;
+}
+
+.bot-photo {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+    border: 1px dashed rgb(66, 0, 128);
+}
+
+.verified-icon {
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+.verified-icon img {
+    width: 20px; 
+    height: 20px;
+}
+
+.clear-button {
+    background-color: #ff4c4c; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.bot-message {
+    background-color: #4c4a9c; 
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.user-message {
+    background-color: #6c63ff; 
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.input-box {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #4c4a9c; 
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #4c4a9c; 
+    border-radius: 5px;
+    background-color: #2d2a5d; 
+    color: white;
+}
+
+button {
+    background-color: #6c63ff; 
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options button {
+    background-color: #8e8ed1; 
+    color: #333;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.options button:hover {
+    background-color: #7a7acd;
+}
