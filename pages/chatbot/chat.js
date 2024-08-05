@@ -2,15 +2,15 @@ const chatBox = document.getElementById('chat-box');
 const userInput = document.getElementById('user-input');
 
 const responses = {
-    1: "Para redefinir sua senha, vá para Configurações e clique em 'Redefinir Senha'.",
-    2: "Você pode encontrar seus pedidos na seção 'Meus Pedidos' no menu principal.",
-    3: "Para rastrear sua encomenda, use o número de rastreamento enviado por email.",
+    1: "Acesse a aba FAQ no menu do site para ver as perguntas frequentes e suas respostas.",
+    2: "Você pode explorar tanto a Tabela Periódica quanto as moléculas em 3D na aba Elementos 3D do nosso site. Lá, você encontrará uma visualização interativa da Tabela Periódica e poderá ver modelos 3D detalhados de várias moléculas.",
+    3: "Para suporte, você pode entrar em contato conosco através do e-mail suporte@genotech.com ou utilizar o formulário de contato disponível na seção Fale Conosco do site.",
     4: "Por favor, descreva sua dúvida e iremos ajudá-lo o mais rápido possível."
 };
 
 function sendMessage() {
-    const userMessage = userInput.value;
-    if (userMessage.trim() !== "") {
+    const userMessage = userInput.value.trim();
+    if (userMessage !== "") {
         appendMessage(userMessage, 'user-message');
         respondToMessage(userMessage);
         userInput.value = "";
@@ -18,8 +18,6 @@ function sendMessage() {
 }
 
 function sendMessageOption(option) {
-    const message = responses[option];
-    appendMessage(message, 'user-message');
     respondToMessage(option);
 }
 
@@ -33,14 +31,25 @@ function appendMessage(message, className) {
 
 function respondToMessage(message) {
     let response = "Desculpe, eu não entendi isso.";
-    if (responses[message]) {
+    if (typeof message === 'number' && responses[message]) {
+        response = responses[message];
+    } else if (responses[message]) {
         response = responses[message];
     }
+
     showTypingIndicator();
     setTimeout(() => {
         hideTypingIndicator();
-        appendMessage(response, 'bot-message');
+        appendBotResponse(response);
     }, 1000);
+}
+
+function appendBotResponse(response) {
+    const lastMessage = chatBox.querySelector('.chat-message.bot-message:last-child');
+    if (lastMessage && lastMessage.textContent === response) {
+        return;
+    }
+    appendMessage(response, 'bot-message');
 }
 
 function showTypingIndicator() {
@@ -69,10 +78,19 @@ function clearChat() {
         }
         appendMessage('Bem-vindo ao GenoChat! Como posso ajudar você hoje?', 'bot-message');
         showOptions();
-    }, 3000); // A mensagem "Chat limpo" desaparecerá após 3 segundos
+    }, 3000);
 }
 
 function showOptions() {
-    const options = document.getElementById('options');
-    options.style.display = 'flex';
+    const optionsHtml = `
+        <div class="options" id="options">
+            <button onclick="sendMessageOption(1)">Onde posso encontrar as perguntas frequentes (FAQ)?</button>
+            <button onclick="sendMessageOption(2)">Onde posso explorar a Tabela Periódica e moléculas em 3D?</button>
+            <button onclick="sendMessageOption(3)">Como posso entrar em contato com o suporte?</button>
+            <button onclick="sendMessageOption(4)">Tenho outra dúvida</button>
+        </div>
+    `;
+    const optionsContainer = document.createElement('div');
+    optionsContainer.innerHTML = optionsHtml;
+    chatBox.appendChild(optionsContainer);
 }
