@@ -28,7 +28,8 @@ header {
 }
 
 .cabecalho img {
-    height: 3.125rem;
+    width: 269px;
+    height: 199px;
 }
 
 .cabecalho div {
@@ -37,13 +38,35 @@ header {
 }
 
 .cabecalho a {
-    color: #C2A5D8;
+    color: #FFF;
     text-decoration: none;
     font-size: 0.875rem;
 }
 
 .cabecalho a:hover {
     color: #FFFFFF;
+}
+
+.ancoras-header a{
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 45px;
+    width: 12em;
+    background-color: red;
+}
+
+.ancoras-header a:nth-child(1){
+    background: transparent;
+    color: #FFF;
+    border: 2.5px solid white;
+}
+
+.ancoras-header a:nth-child(2){
+    color: white;
+    background: linear-gradient(to left, #8a7ca8, #b7a9c7, #dad2e49f);
 }
 
 .conteudo-header {
@@ -61,6 +84,13 @@ header {
     font-size: 2.25rem;
     line-height: 1.2;
     margin-bottom: 1.25rem;
+}
+
+.conteudo-esq h1 strong{
+        font-size: 48px;
+        background: linear-gradient(to left, #8a7ca8, #b7a9c7, #dad2e49f);
+        -webkit-background-clip: text;
+        color: transparent;
 }
 
 .conteudo-esq p {
@@ -84,24 +114,29 @@ header {
 }
 
 .img-dir img {
+    border: 18px solid #312537;
+    border-radius: 19% 25% 25% 65% / 23% 25% 25% 57%;
     max-width: 100%;
     height: auto;
 }
 
+.primeira-secao{
+    display: flex;
+}
+
 .transicao, .primeira-secao, .segunda-secao, .terceira-secao {
-    padding: 2.5rem 1.25rem;
     width: 100%;
     box-sizing: border-box;
 }
 
 .transicao .artigos, .transicao .Downloads, .transicao .tutoriais {
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 1.25rem;
 }
 
 .transicao h1, .segunda-secao h1, .terceira-secao h1 {
-    font-size: 1.5rem;
     margin-bottom: 0.625rem;
 }
 
@@ -120,6 +155,12 @@ header {
     margin-bottom: 0.625rem;
 }
 
+.esq-primeira-secao div img{
+    border-radius: 70% 21% 32% 18% / 65% 20% 47% 25%;
+    -webkit-box-shadow: 9px 13.5px 25px -10.5px #433d5b;
+    -moz-box-shadow: 9px 13.5px 25px -10.5px #433d5b;
+    box-shadow: 9px 13.5px 25px -10.5px #433d5b;
+}
 .dir-primeira-secao p {
     font-size: 1rem;
     color: #C2A5D8;
@@ -172,12 +213,11 @@ header {
 }
 
 .form-container {
-    background-color: #3F3154;
-    border-radius: 1.25rem;
+    background: radial-gradient(circle, #3A3456 0%, #211E2E 95%);    border-radius: 1.25rem;
     padding: 2.5rem;
     text-align: center;
     width: 25rem;
-    max-width: 100%;
+    max-width: 100vw;
     box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.2);
     margin: 0 auto;
 }
@@ -253,6 +293,7 @@ footer {
 }
 
 .footer-container {
+    gap: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -331,13 +372,13 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #2E254D;
     padding: 20px 0;
     color: white;
     font-family: 'Arial', sans-serif;
 }
 
 .meio-terceira-secao div {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -346,8 +387,9 @@ footer {
 }
 
 .meio-terceira-secao div div:first-child {
-    
-    color: white;
+    border: 10px solid #0D0D0D;
+    background: linear-gradient(90deg, #C0B7E8 0%, #8176AF 100%);
+    color: #343045;
     font-size: 2rem;
     font-weight: bold;
     width: 60px;
@@ -373,11 +415,72 @@ footer {
 }
 
 .meio-terceira-secao p {
-    color: #B9A8D3;
+    color: white;
     font-size: 1rem;
     width: 150px;
 }
 
 .meio-terceira-secao div:nth-child(4)::after {
     content: none;
+}
+
+.cima-segunda-secao{
+    display: flex;
+}
+
+.transicao {
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: radial-gradient(circle, #3A3456 0%, #211E2E 95%);
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.transicao div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.transicao div h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.transicao div p {
+    font-size: 1rem;
+    color: #B9A8D3;
+}
+
+.transicao div img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.artigos {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.tutoriais {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.inicio-terceira-secao{
+    display: flex;
+}
+
+.artigos div:nth-child(2){
+    color: #fff;
 }
