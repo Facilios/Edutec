@@ -1,0 +1,383 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #302C42;
+    color: #FFFFFF;
+}
+
+.mae {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    background-color: #302C42;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.cabecalho img {
+    height: 3.125rem;
+}
+
+.cabecalho div {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.cabecalho a {
+    color: #C2A5D8;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.cabecalho a:hover {
+    color: #FFFFFF;
+}
+
+.conteudo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.conteudo-esq {
+    max-width: 50%;
+}
+
+.conteudo-esq h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+}
+
+.conteudo-esq p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    color: #C2A5D8;
+}
+
+.conteudo-esq a {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background-color: #8A69B0;
+    border-radius: 0.625rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.conteudo-esq a:hover {
+    background-color: #7A5E9A;
+}
+
+.img-dir img {
+    max-width: 100%;
+    height: auto;
+}
+
+.transicao, .primeira-secao, .segunda-secao, .terceira-secao {
+    padding: 2.5rem 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.transicao .artigos, .transicao .Downloads, .transicao .tutoriais {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.transicao h1, .segunda-secao h1, .terceira-secao h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+}
+
+.transicao p, .segunda-secao p, .terceira-secao p {
+    font-size: 1rem;
+    color: #C2A5D8;
+}
+
+.artigos img, .Downloads img, .tutoriais img {
+    height: 5rem;
+    margin-right: 1.25rem;
+}
+
+.esq-primeira-secao h1, .dir-primeira-secao h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+}
+
+.dir-primeira-secao p {
+    font-size: 1rem;
+    color: #C2A5D8;
+}
+
+.cards-segunda-secao {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    background-color: #3F3154;
+    border-radius: 0.625rem;
+    padding: 1.25rem;
+    width: 18rem;
+    text-align: center;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.625rem;
+}
+
+.card-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+}
+
+.card-text {
+    font-size: 0.875rem;
+    color: #C2A5D8;
+    margin-bottom: 1.25rem;
+}
+
+.card a {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background-color: #8A69B0;
+    border-radius: 0.625rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #7A5E9A;
+}
+
+.form-container {
+    background-color: #3F3154;
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    text-align: center;
+    width: 25rem;
+    max-width: 100%;
+    box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.form-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+}
+
+.form-container p {
+    font-size: 1rem;
+    color: #C2A5D8;
+    margin-bottom: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    border: none;
+    background-color: #5B486F;
+    color: #FFFFFF;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.form-group input {
+    height: 2.5rem;
+}
+
+.form-group textarea {
+    height: 5rem;
+    resize: none;
+}
+
+.form-group .input-half {
+    width: 48%;
+    display: inline-block;
+}
+
+.form-group .input-half:first-child {
+    margin-right: 0.25rem;
+}
+
+.form-group .input-half:last-child {
+    margin-left: 0.25rem;
+}
+
+.form-button {
+    padding: 0.625rem 1.25rem;
+    background-color: #8A69B0;
+    border-radius: 0.625rem;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #7A5E9A;
+}
+
+footer {
+    background-color: #302C42;
+    padding: 2rem;
+    color: #FFFFFF;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-logo {
+    max-width: 150px;
+}
+
+.footer-center {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #C2A5D8;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right p {
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    margin-right: 1rem;
+}
+
+.feedback-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #8A69B0;
+    border-radius: 0.5rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.feedback-button:hover {
+    background-color: #7A5E9A;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #C2A5D8;
+}
+
+.meio-terceira-secao {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2E254D;
+    padding: 20px 0;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.meio-terceira-secao div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.meio-terceira-secao div div:first-child {
+    
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.meio-terceira-secao div img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.meio-terceira-secao div:nth-child(4) img {
+    display: none;
+}
+
+.meio-terceira-secao p {
+    color: #B9A8D3;
+    font-size: 1rem;
+    width: 150px;
+}
+
+.meio-terceira-secao div:nth-child(4)::after {
+    content: none;
+}
